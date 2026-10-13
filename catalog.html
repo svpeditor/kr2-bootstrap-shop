@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог механических клавиатур, свитчей, кейкапов и аксессуаров.">
+    <title>Каталог | Клац</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Клац</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="catalog.html" aria-current="page">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Клац 60</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">Оформить заявку</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Каталог</li>
+            </ol>
+        </nav>
+
+        <h1 class="mb-4">Каталог</h1>
+
+        <div class="row g-4">
+            <aside class="col-12 col-lg-3">
+                <div class="card filters">
+                    <div class="card-body">
+                        <h2 class="h5 card-title">Фильтры</h2>
+                        <form>
+                            <div class="mb-3">
+                                <label for="filterCategory" class="form-label">Категория</label>
+                                <select class="form-select" id="filterCategory" name="category">
+                                    <option value="all" selected>Все товары</option>
+                                    <option value="keyboards">Клавиатуры</option>
+                                    <option value="switches">Свитчи</option>
+                                    <option value="keycaps">Кейкапы</option>
+                                    <option value="accessories">Аксессуары</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <p class="form-label mb-2">Цена</p>
+                                <div class="input-group mb-2">
+                                    <span class="input-group-text">от</span>
+                                    <input type="number" class="form-control" name="price_from" min="0" placeholder="0" aria-label="Цена от">
+                                    <span class="input-group-text">₽</span>
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-text">до</span>
+                                    <input type="number" class="form-control" name="price_to" min="0" placeholder="15000" aria-label="Цена до">
+                                    <span class="input-group-text">₽</span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="filterStock" name="in_stock" checked>
+                                    <label class="form-check-label" for="filterStock">Только в наличии</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="filterSale" name="sale">
+                                    <label class="form-check-label" for="filterSale">Со скидкой</label>
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">Показать</button>
+                                <button type="reset" class="btn btn-outline-secondary">Сбросить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="col-12 col-lg-9">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                    <p class="mb-0 text-body-secondary">Найдено товаров: 10</p>
+                    <div class="d-flex align-items-center gap-2">
+                        <label for="sort" class="text-nowrap">Сортировка:</label>
+                        <select class="form-select form-select-sm" id="sort" name="sort">
+                            <option value="popular" selected>сначала популярные</option>
+                            <option value="cheap">сначала дешевые</option>
+                            <option value="expensive">сначала дорогие</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="alert alert-warning" role="alert">
+                    Фильтры пока работают только как пример формы, список товаров не меняется.
+                </div>
+
+                <div class="row g-4">
+                <div class="col-12 col-sm-6 col-xl-4">
+                    <div class="card h-100 product-card">
+                        <img src="images/klac-60.jpg" class="card-img-top" alt="Клац 60" width="800" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge text-bg-danger align-self-start mb-2">Хит</span>
+                            <h3 class="h5 card-title">Клац 60</h3>
+                            <p class="card-text">Компактная клавиатура на 61 клавишу со свитчами Gateron Yellow.</p>
+                            <p class="price mt-auto mb-3">5 490 ₽</p>
+                            <div class="d-flex gap-2">
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                                <a href="order.html?product=klac-60" class="btn btn-primary btn-sm">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-4">
+                    <div class="card h-100 product-card">
+                        <img src="images/klac-65-wood.jpg" class="card-img-top" alt="Клац 65 Wood" width="800" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge text-bg-success align-self-start mb-2">Новинка</span>
+                            <h3 class="h5 card-title">Клац 65 Wood</h3>
+                            <p class="card-text">Корпус из ореха, отдельные стрелки и кейкапы Кемпинг в комплекте.</p>
+                            <p class="price mt-auto mb-3">12 990 ₽</p>
+                            <div class="d-flex gap-2">
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                                <a href="order.html?product=klac-65-wood" class="btn btn-primary btn-sm">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-4">
+                    <div class="card h-100 product-card">
+                        <img src="images/klac-tkl-graphite.jpg" class="card-img-top" alt="Клац TKL Graphite" width="800" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge text-bg-warning align-self-start mb-2">Скидка</span>
+                            <h3 class="h5 card-title">Клац TKL Graphite</h3>
+                            <p class="card-text">Без цифрового блока, темный корпус и тактильные свитчи Kailh Box Brown.</p>
+                            <p class="price mt-auto mb-3">7 990 ₽ <span class="old-price">9 490 ₽</span></p>
+                            <div class="d-flex gap-2">
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                                <a href="order.html?product=klac-tkl-graphite" class="btn btn-primary btn-sm">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-4">
+                    <div class="card h-100 product-card">
+                        <img src="images/klac-tkl-retro.jpg" class="card-img-top" alt="Клац TKL Retro" width="800" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 card-title">Клац TKL Retro</h3>
+                            <p class="card-text">Оранжевые и кремовые кейкапы в стиле старых компьютеров, линейные свитчи.</p>
+                            <p class="price mt-auto mb-3">8 490 ₽</p>
+                            <div class="d-flex gap-2">
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                                <a href="order.html?product=klac-tkl-retro" class="btn btn-primary btn-sm">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-4">
+                    <div class="card h-100 product-card">
+                        <img src="images/switches-mx-green.jpg" class="card-img-top" alt="Свитчи Cherry MX Green, 10 шт." width="800" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 card-title">Свитчи Cherry MX Green, 10 шт.</h3>
+                            <p class="card-text">Тактильные свитчи со щелчком и усилием нажатия 80 г.</p>
+                            <p class="price mt-auto mb-3">1 190 ₽</p>
+                            <div class="d-flex gap-2">
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                                <a href="order.html?product=switches-mx-green" class="btn btn-primary btn-sm">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-4">
+                    <div class="card h-100 product-card">
+                        <img src="images/switch-tester.jpg" class="card-img-top" alt="Тестер свитчей, 6 видов" width="800" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge text-bg-success align-self-start mb-2">Новинка</span>
+                            <h3 class="h5 card-title">Тестер свитчей, 6 видов</h3>
+                            <p class="card-text">Шесть популярных свитчей на подставке, чтобы выбрать свой ход клавиш.</p>
+                            <p class="price mt-auto mb-3">790 ₽</p>
+                            <div class="d-flex gap-2">
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                                <a href="order.html?product=switch-tester" class="btn btn-primary btn-sm">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-4">
+                    <div class="card h-100 product-card">
+                        <img src="images/keycaps-orange.jpg" class="card-img-top" alt="Кейкапы Orange, 110 шт." width="800" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge text-bg-warning align-self-start mb-2">Скидка</span>
+                            <h3 class="h5 card-title">Кейкапы Orange, 110 шт.</h3>
+                            <p class="card-text">Яркий набор из PBT-пластика для полноразмерных и TKL-клавиатур.</p>
+                            <p class="price mt-auto mb-3">2 990 ₽ <span class="old-price">3 490 ₽</span></p>
+                            <div class="d-flex gap-2">
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                                <a href="order.html?product=keycaps-orange" class="btn btn-primary btn-sm">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-4">
+                    <div class="card h-100 product-card">
+                        <img src="images/keycaps-camp.jpg" class="card-img-top" alt="Кейкапы Кемпинг, 140 шт." width="800" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 card-title">Кейкапы Кемпинг, 140 шт.</h3>
+                            <p class="card-text">Зеленые, бордовые и кремовые кейкапы с рисунками гор и палаток.</p>
+                            <p class="price mt-auto mb-3">4 490 ₽</p>
+                            <div class="d-flex gap-2">
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                                <a href="order.html?product=keycaps-camp" class="btn btn-primary btn-sm">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-4">
+                    <div class="card h-100 product-card">
+                        <img src="images/keycap-puller.jpg" class="card-img-top" alt="Съемник кейкапов" width="800" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 card-title">Съемник кейкапов</h3>
+                            <p class="card-text">Проволочный съемник, чтобы снять кейкапы и не поцарапать корпус.</p>
+                            <p class="price mt-auto mb-3">390 ₽</p>
+                            <div class="d-flex gap-2">
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                                <a href="order.html?product=keycap-puller" class="btn btn-primary btn-sm">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-4">
+                    <div class="card h-100 product-card">
+                        <img src="images/cable-coiled.jpg" class="card-img-top" alt="Витой кабель USB-C" width="800" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge text-bg-secondary align-self-start mb-2">Нет в наличии</span>
+                            <h3 class="h5 card-title">Витой кабель USB-C</h3>
+                            <p class="card-text">Кабель 1,5 м с пружиной и разъемом-авиатором. Ждем новую поставку.</p>
+                            <p class="price mt-auto mb-3">1 490 ₽</p>
+                            <div class="d-flex gap-2">
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                                <button type="button" class="btn btn-secondary btn-sm" disabled>Нет в наличии</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <nav class="mt-4" aria-label="Страницы каталога">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled"><span class="page-link">Назад</span></li>
+                        <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                        <li class="page-item"><a class="page-link" href="catalog.html">2</a></li>
+                        <li class="page-item"><a class="page-link" href="catalog.html">3</a></li>
+                        <li class="page-item"><a class="page-link" href="catalog.html">Вперед</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer border-top py-4 mt-5">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                    <p class="fw-bold mb-1">Клац</p>
+                    <p class="text-body-secondary mb-0">Учебный интернет-магазин механических клавиатур.</p>
+                </div>
+                <div class="col-12 col-md-6 text-md-end">
+                    <p class="mb-1"><a href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+                    <p class="mb-0"><a href="mailto:shop@klac.example">shop@klac.example</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
