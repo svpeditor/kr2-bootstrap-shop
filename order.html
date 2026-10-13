@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Форма заявки на покупку в магазине Клац.">
+    <title>Оформление заявки | Клац</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Клац</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Клац 60</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="order.html" aria-current="page">Оформить заявку</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Оформление заявки</li>
+            </ol>
+        </nav>
+
+        <h1 class="mb-4">Оформление заявки</h1>
+
+        <div class="row g-4">
+            <div class="col-12 col-lg-8">
+                <div class="alert alert-info" role="alert">
+                    Оплата при получении. После заявки менеджер позвонит и уточнит адрес доставки.
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <form class="order-form" novalidate>
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <label for="name" class="form-label">Имя</label>
+                                    <input type="text" class="form-control" id="name" name="name" autocomplete="name" required>
+                                    <div class="invalid-feedback">Введите имя.</div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="email" name="email" autocomplete="email" placeholder="name@example.com" required>
+                                    <div class="invalid-feedback">Введите e-mail, например name@example.com.</div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="phone" class="form-label">Телефон</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text">+7</span>
+                                        <input type="tel" class="form-control" id="phone" name="phone" autocomplete="tel-national" placeholder="900 000-00-00" pattern="[0-9 ()-]{10,15}" required>
+                                        <div class="invalid-feedback">Введите телефон, 10 цифр после +7.</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="product" class="form-label">Товар</label>
+                                    <select class="form-select" id="product" name="product" required>
+                                    <option value="" selected disabled>Выберите товар</option>
+                                    <option value="klac-60">Клац 60</option>
+                                    <option value="klac-65-wood">Клац 65 Wood</option>
+                                    <option value="klac-tkl-graphite">Клац TKL Graphite</option>
+                                    <option value="klac-tkl-retro">Клац TKL Retro</option>
+                                    <option value="switches-mx-green">Свитчи Cherry MX Green, 10 шт.</option>
+                                    <option value="switch-tester">Тестер свитчей, 6 видов</option>
+                                    <option value="keycaps-orange">Кейкапы Orange, 110 шт.</option>
+                                    <option value="keycaps-camp">Кейкапы Кемпинг, 140 шт.</option>
+                                    <option value="keycap-puller">Съемник кейкапов</option>
+                                    <option value="cable-coiled" disabled>Витой кабель USB-C (нет в наличии)</option>
+                                    </select>
+                                    <div class="invalid-feedback">Выберите товар.</div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="quantity" class="form-label">Количество</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="quantity" name="quantity" min="1" max="10" value="1">
+                                        <span class="input-group-text">шт.</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <p class="form-label">Доставка</p>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="delivery" id="deliveryCourier" value="courier" checked>
+                                        <label class="form-check-label" for="deliveryCourier">Курьером по Москве</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="delivery" id="deliveryPickup" value="pickup">
+                                        <label class="form-check-label" for="deliveryPickup">Самовывоз из шоурума</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="comment" class="form-label">Комментарий</label>
+                                    <textarea class="form-control" id="comment" name="comment" rows="4" placeholder="Например, нужна русская раскладка или комплектация с тестером"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="agree" name="agree" required>
+                                        <label class="form-check-label" for="agree">Согласен на обработку персональных данных</label>
+                                        <div class="invalid-feedback">Без согласия заявку отправить нельзя.</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex flex-wrap gap-2">
+                                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                                    <button type="reset" class="btn btn-outline-secondary">Очистить</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="h5 card-title">Как проходит заказ</h2>
+                        <ol class="list-group list-group-numbered list-group-flush">
+                            <li class="list-group-item">Вы оставляете заявку</li>
+                            <li class="list-group-item">Менеджер звонит и уточняет детали</li>
+                            <li class="list-group-item">Проверяем клавиатуру и отправляем</li>
+                            <li class="list-group-item">Оплачиваете при получении</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="h5 card-title">Нужна помощь?</h2>
+                        <p class="card-text">Позвоните, и мы поможем выбрать клавиатуру.</p>
+                        <a href="tel:+74950000000" class="btn btn-outline-primary">+7 (495) 000-00-00</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer border-top py-4 mt-5">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                    <p class="fw-bold mb-1">Клац</p>
+                    <p class="text-body-secondary mb-0">Учебный интернет-магазин механических клавиатур.</p>
+                </div>
+                <div class="col-12 col-md-6 text-md-end">
+                    <p class="mb-1"><a href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+                    <p class="mb-0"><a href="mailto:shop@klac.example">shop@klac.example</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" id="sentToast" role="status" aria-live="polite" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Клац</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+            </div>
+            <div class="toast-body">Заявка отправлена. Менеджер перезвонит в течение часа.</div>
+        </div>
+    </div>
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
