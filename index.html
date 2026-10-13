@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Клац - учебный интернет-магазин механических клавиатур на Bootstrap.">
+    <title>Клац | Магазин механических клавиатур</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Клац</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Клац 60</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">Оформить заявку</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero py-5 mb-5">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-lg-6">
+                        <h1 class="display-5 fw-bold">Магазин механических клавиатур</h1>
+                        <p class="lead">Продаем механические клавиатуры, свитчи, кейкапы и аксессуары. Каждую клавиатуру проверяем перед отправкой.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="catalog.html" class="btn btn-primary btn-lg">Перейти в каталог</a>
+                            <button type="button" class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#quickOrderModal">Быстрый заказ</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div id="heroCarousel" class="carousel slide rounded overflow-hidden" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/klac-65-wood.jpg" class="d-block w-100" alt="Клавиатура Клац 65 Wood" width="800" height="600">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/klac-tkl-retro.jpg" class="d-block w-100" alt="Клавиатура Клац TKL Retro" width="800" height="600">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/keycaps-camp.jpg" class="d-block w-100" alt="Кейкапы Кемпинг" width="800" height="600">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Предыдущий</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Следующий</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="alert alert-info" role="alert">
+                Бесплатная доставка по Москве при заказе от 5 000 ₽.
+            </div>
+
+            <section class="mb-5" id="advantages">
+                <h2 class="mb-4">Почему выбирают нас</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Гарантия 1 год</h3>
+                                <p class="card-text">Если клавиша перестала работать, заменим свитч или всю клавиатуру.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Доставка за 1-2 дня</h3>
+                                <p class="card-text">По Москве курьером, в другие города через пункты выдачи.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Тестер свитчей</h3>
+                                <p class="card-text">В магазине можно попробовать разные свитчи и выбрать свои.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Помощь с выбором</h3>
+                                <p class="card-text">Подскажем, какая клавиатура подойдет для работы, а какая для игр.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="popular">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="mb-0">Популярные товары</h2>
+                    <a href="catalog.html" class="btn btn-link">Весь каталог</a>
+                </div>
+                <div class="row g-4">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 product-card">
+                        <img src="images/klac-60.jpg" class="card-img-top" alt="Клац 60" width="800" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge text-bg-danger align-self-start mb-2">Хит</span>
+                            <h3 class="h5 card-title">Клац 60</h3>
+                            <p class="card-text">Компактная клавиатура на 61 клавишу со свитчами Gateron Yellow.</p>
+                            <p class="price mt-auto mb-3">5 490 ₽</p>
+                            <div class="d-flex gap-2">
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                                <a href="order.html?product=klac-60" class="btn btn-primary btn-sm">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 product-card">
+                        <img src="images/klac-65-wood.jpg" class="card-img-top" alt="Клац 65 Wood" width="800" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge text-bg-success align-self-start mb-2">Новинка</span>
+                            <h3 class="h5 card-title">Клац 65 Wood</h3>
+                            <p class="card-text">Корпус из ореха, отдельные стрелки и кейкапы Кемпинг в комплекте.</p>
+                            <p class="price mt-auto mb-3">12 990 ₽</p>
+                            <div class="d-flex gap-2">
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                                <a href="order.html?product=klac-65-wood" class="btn btn-primary btn-sm">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 product-card">
+                        <img src="images/klac-tkl-graphite.jpg" class="card-img-top" alt="Клац TKL Graphite" width="800" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge text-bg-warning align-self-start mb-2">Скидка</span>
+                            <h3 class="h5 card-title">Клац TKL Graphite</h3>
+                            <p class="card-text">Без цифрового блока, темный корпус и тактильные свитчи Kailh Box Brown.</p>
+                            <p class="price mt-auto mb-3">7 990 ₽ <span class="old-price">9 490 ₽</span></p>
+                            <div class="d-flex gap-2">
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                                <a href="order.html?product=klac-tkl-graphite" class="btn btn-primary btn-sm">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card h-100 product-card">
+                        <img src="images/switch-tester.jpg" class="card-img-top" alt="Тестер свитчей, 6 видов" width="800" height="600" loading="lazy">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge text-bg-success align-self-start mb-2">Новинка</span>
+                            <h3 class="h5 card-title">Тестер свитчей, 6 видов</h3>
+                            <p class="card-text">Шесть популярных свитчей на подставке, чтобы выбрать свой ход клавиш.</p>
+                            <p class="price mt-auto mb-3">790 ₽</p>
+                            <div class="d-flex gap-2">
+                                <a href="product.html" class="btn btn-outline-primary btn-sm">Подробнее</a>
+                                <a href="order.html?product=switch-tester" class="btn btn-primary btn-sm">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer border-top py-4 mt-5">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                    <p class="fw-bold mb-1">Клац</p>
+                    <p class="text-body-secondary mb-0">Учебный интернет-магазин механических клавиатур.</p>
+                </div>
+                <div class="col-12 col-md-6 text-md-end">
+                    <p class="mb-1"><a href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+                    <p class="mb-0"><a href="mailto:shop@klac.example">shop@klac.example</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="quickOrderModal" tabindex="-1" aria-labelledby="quickOrderTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="order-form" novalidate>
+                    <div class="modal-header">
+                        <h2 class="modal-title h5" id="quickOrderTitle">Быстрый заказ</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Оставьте имя и телефон, менеджер перезвонит и поможет с выбором.</p>
+                        <div class="mb-3">
+                            <label for="quickName" class="form-label">Имя</label>
+                            <input type="text" class="form-control" id="quickName" name="name" required>
+                            <div class="invalid-feedback">Введите имя.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="quickPhone" class="form-label">Телефон</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text">+7</span>
+                                <input type="tel" class="form-control" id="quickPhone" name="phone" placeholder="900 000-00-00" required>
+                                <div class="invalid-feedback">Введите телефон.</div>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="quickAgree" name="agree" required>
+                            <label class="form-check-label" for="quickAgree">Согласен на обработку персональных данных</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" id="sentToast" role="status" aria-live="polite" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Клац</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+            </div>
+            <div class="toast-body">Заявка отправлена. Менеджер перезвонит в течение часа.</div>
+        </div>
+    </div>
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+/* Свои стили поверх Bootstrap. Файл подключается после bootstrap.min.css,
+   поэтому эти правила могут переопределять стандартные. */
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--bs-primary);
+}
+
+/* Светло-синий фон приветственного блока */
+.hero {
+    background-color: #eef4ff;
+}
+
+/* Картинки в карточках и в карусели одного размера */
+.product-card .card-img-top,
+.carousel-item img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.product-card {
+    transition: box-shadow 0.2s;
+}
+
+.product-card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.old-price {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--bs-secondary-color);
+    text-decoration: line-through;
+}
+
+.site-footer {
+    background-color: var(--bs-tertiary-bg);
+}
+
+.site-footer a {
+    text-decoration: none;
+}
+
+/* На широком экране фильтры каталога остаются на месте при прокрутке */
+@media (min-width: 992px) {
+    .filters {
+        position: sticky;
+        top: 1rem;
+    }
+}
