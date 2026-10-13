@@ -14,6 +14,7 @@
 /* Картинки в карточках и в карусели одного размера */
 .product-card .card-img-top,
 .carousel-item img {
+    height: auto;
     aspect-ratio: 4 / 3;
     object-fit: cover;
 }
