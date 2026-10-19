@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Способы доставки, сроки, стоимость и оплата заказов в магазине Клац.">
+    <title>Доставка и оплата | Клац</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Клац</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Клац 60</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">Оформить заявку</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="delivery.html" aria-current="page">Доставка</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Доставка и оплата</li>
+            </ol>
+        </nav>
+
+        <h1 class="mb-3">Доставка и оплата</h1>
+        <p class="lead mb-4">Отправляем заказы по всей России. Перед отправкой проверяем каждую клавиатуру.</p>
+
+        <div class="alert alert-info" role="alert">
+            Курьером по Москве доставим бесплатно, если сумма заказа от 7 000 ₽.
+        </div>
+
+        <section class="mb-5">
+            <h2 class="mb-3">Способы доставки</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered align-middle">
+                    <caption>Сроки и стоимость доставки</caption>
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">Способ</th>
+                            <th scope="col">Срок</th>
+                            <th scope="col">Стоимость</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">Самовывоз из шоурума</th><td>В день заказа</td><td><span class="badge text-bg-success">бесплатно</span></td></tr>
+                        <tr><th scope="row">Курьер по Москве</th><td>1-2 дня</td><td>390 ₽, от 7 000 ₽ бесплатно</td></tr>
+                        <tr><th scope="row">Пункт выдачи</th><td>2-6 дней</td><td>от 290 ₽</td></tr>
+                        <tr><th scope="row">Почта России</th><td>5-14 дней</td><td>от 350 ₽</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="mb-3">Оплата</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Картой онлайн</h3>
+                            <p class="card-text">Ссылку на оплату пришлем после того, как менеджер подтвердит заказ.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">При получении</h3>
+                            <p class="card-text">Наличными или картой курьеру и в шоуруме.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">По счету</h3>
+                            <p class="card-text">Для компаний выставляем счет и отправляем закрывающие документы.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="mb-3">Как проходит заказ</h2>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item">Вы оставляете заявку на сайте или звоните нам.</li>
+                <li class="list-group-item">Менеджер перезванивает и уточняет комплектацию и адрес.</li>
+                <li class="list-group-item">Мы проверяем клавиатуру и упаковываем заказ.</li>
+                <li class="list-group-item">Передаем заказ в доставку и присылаем трек-номер.</li>
+            </ol>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="mb-3">Гарантия и возврат</h2>
+            <p>На все клавиатуры действует гарантия 12 месяцев. Если свитч перестал срабатывать, заменим его бесплатно.</p>
+            <p class="mb-0">Вернуть товар можно в течение 14 дней, если он не был в использовании и сохранена упаковка.</p>
+        </section>
+
+        <div class="p-4 bg-body-tertiary border rounded d-md-flex justify-content-between align-items-center">
+            <div class="mb-3 mb-md-0">
+                <h2 class="h4">Остались вопросы?</h2>
+                <p class="mb-0">Посмотрите ответы на частые вопросы или оставьте заявку.</p>
+            </div>
+            <div>
+                <a href="contacts.html" class="btn btn-outline-primary me-2">Частые вопросы</a>
+                <a href="order.html" class="btn btn-primary">Оформить заявку</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer border-top py-4 mt-5">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                    <p class="fw-bold mb-1">Клац</p>
+                    <p class="text-body-secondary mb-0">Учебный интернет-магазин механических клавиатур.</p>
+                </div>
+                <div class="col-12 col-md-6 text-md-end">
+                    <p class="mb-1"><a href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+                    <p class="mb-0"><a href="mailto:shop@klac.example">shop@klac.example</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
