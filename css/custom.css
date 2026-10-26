@@ -1,6 +1,11 @@
 /* Свои стили поверх Bootstrap. Файл подключается после bootstrap.min.css,
    поэтому эти правила могут переопределять стандартные. */
 
+/* Минимальная высота страницы, как в практике 9 */
+body {
+    min-height: 100vh;
+}
+
 .navbar-brand {
     font-weight: 700;
     color: var(--bs-primary);
