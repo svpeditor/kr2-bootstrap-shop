@@ -143,6 +143,17 @@ kr2-bootstrap-shop/
 
 В `custom.css` высота картинки в карточке задана не фиксированными 180px, как в примере методички, а через `aspect-ratio: 4 / 3` и `object-fit: cover`, чтобы фото не обрезались по-разному на разной ширине.
 
+## Практическая работа 11
+
+Финальная проверка КР №2 перед сдачей:
+
+- проверена структура проекта: `index.html`, `catalog.html`, `product.html`, `order.html`, `css/custom.css`, `images/`, `README.md`, `.gitignore`, папка `vendor/bootstrap/`;
+- проверено подключение Bootstrap: `vendor/bootstrap/css/bootstrap.min.css` в head, `vendor/bootstrap/js/bootstrap.bundle.min.js` перед `</body>`, `css/custom.css` подключается после Bootstrap на всех страницах;
+- проверены страницы, сетка (`container`, `row`, `col-*`) и компоненты (`navbar`, `card`, `btn`, `badge`, `alert`, `modal`, формы, `accordion`, `carousel`, вкладки);
+- проверена форма заявки: пустая форма не отправляется, поля подсвечиваются, после отправки появляется уведомление;
+- проверена опубликованная версия на GitHub Pages: страницы открываются, стили Bootstrap подключаются, меню и модальное окно работают;
+- выполнено дополнительное задание: Bootstrap подключён локально, без CDN.
+
 ## Источники изображений
 
 Фотографии взяты из КР №1, источник - Wikimedia Commons, у всех свободная лицензия. Фото обрезаны и уменьшены.
